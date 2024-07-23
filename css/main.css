@@ -1,0 +1,255 @@
+/* CSS ELEMENTS */
+@import url(input.css);
+@import url(navbar.css);
+@import url(footer.css);
+
+/* CSS VARIABLES */
+@import url(variables.css);
+
+/* CSS ICONS */
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+/* CSS FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@400;700&display=swap');
+
+body {
+    box-sizing: border-box;
+    font-family: 'Ubuntu Sans', 'Ubuntu', sans-serif, arial;
+    font-weight: 400;
+    color: var(--text-color);
+    background: var(--background-color);
+    width: 100%;
+    min-height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.page {
+    display: none;
+    position: relative;
+    top: 50px;
+    left: 50%;
+    background: var(--page-color);
+    box-shadow: 0 0 15px var(--text-color);
+    border-radius: 20px;
+    max-width: 650px;
+    padding: 30px 20px 30px 20px;
+    transform: translate(-50%);
+    transition: all 0.3s;
+}
+
+.page .mode {
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--text-color);
+    background-color: var(--button-color);
+    transition: all 0.3s;
+}
+
+.page .mode:hover {
+    transform: scale(1.05);
+    background-color: var(--primary-color);
+}
+
+.page .mode i {
+    position: relative;
+    font-size: 1.5em;
+    top: 50%;
+    left: 50%;
+    color: var(--page-color);
+    transform: translate(-50%, -50%);
+}
+
+.page .lang {
+    position: absolute;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    left: 15px;
+    top: 15px;
+    width: auto;
+    height: 40px;
+    padding: 0 5px 0 5px;
+    border-radius: 50px;
+    box-shadow: 0 0 10px var(--text-color);
+    background-color: var(--button-color);
+    transition: all 0.3s;
+}
+
+.page .lang a {
+    text-decoration: none;
+    margin: 5px;
+    color: var(--page-color);
+    font-size: 1em;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.page .lang a:hover {
+    color: var(--text-color);
+}
+
+.page .lang .selected {
+    color: var(--primary-color);
+}
+
+.page .profile_image {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 0 auto;
+    background: var(--button-color);
+    box-shadow: 0 0 10px var(--text-color);
+    transition: all 0.3s;
+}
+
+.page .profile_image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--primary-color);
+}
+
+.page .profile_image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+
+.page .profile_name {
+    font-size: 18pt;
+    font-weight: 700;
+    text-align: center;
+    margin: 20px 0;
+    transition: all 0.3s;
+}
+
+.page .profile_name h1 {
+    margin: 0;
+}
+
+.page .profile_description {
+    font-size: 14pt;
+    font-weight: 400;
+    text-align: center;
+    margin: 15px 0;
+    transition: all 0.3s;
+}
+
+.page .profile_description p {
+    margin: 0;
+}
+
+.page .buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    max-width: 500px;
+    margin: 15px auto 30px auto;
+    transition: all 0.3s;
+}
+
+.page .buttons a {
+    max-width: 100%;
+    padding: 15px;
+    margin: 7px 0;
+    text-align: center;
+    font-size: 15pt;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--background-color);
+    box-shadow: 0 0 5px var(--text-color);
+    background-color: var(--button-color);
+    border-radius: 10px;
+    transition: all 0.3s;
+}
+
+.page .buttons a:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+.page .media {
+    font-size: 30pt;
+    display: flex;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.page .media a {
+    width: 50px;
+    height: 50px;
+    margin: 0 5px;
+    transition: all 0.3s;
+}
+
+.page .media a:hover {
+    transform: scale(1.1);
+}
+
+.page .media a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.author {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    font-size: 10pt;
+    font-weight: 400;
+    color: var(--text-color);
+    transition: all 0.3s;
+}
+
+@media only screen and (max-width: 650px) {
+    .page {
+        top: 0;
+        padding: 25px 20px 25px 20px;
+        border-radius: 0px;
+    }
+
+    .page .mode {
+        top: 10px;
+        right: 10px;
+    }
+    .page .lang {
+        top: 10px;
+        left: 10px;
+    }
+
+    .page .profile_image {
+        width: 100px;
+        height: 100px;
+    }
+    .page .profile_name {
+        font-size: 15pt;
+    }
+    .page .profile_description {
+        font-size: 12pt;
+    }
+
+    .page .buttons a {
+        font-size: 13pt;
+        padding: 10px;
+    }
+
+    .page .media a {
+        width: 40px;
+        height: 40px;
+        margin: 0 3px;
+    }
+
+    .author {
+        font-size: 8pt;
+    }
+}
